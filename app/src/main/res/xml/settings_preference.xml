@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/general">
+
+        <ListPreference
+            android:layout_height="48dp"
+            android:defaultValue="@string/def_time_format"
+            android:entries="@array/time_format_array"
+            android:entryValues="@array/time_format_values"
+            android:icon="@drawable/ic_time_format"
+            android:key="time_format_key"
+            android:title="@string/chose_time_format"
+            app:useSimpleSummaryProvider="true" />
+        <Preference
+            android:icon="@drawable/ic_rate"
+            android:key="rate_app_key"
+            android:summary="@string/rate_app"
+            android:title="@string/rate_app_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/theme_settings">
+
+        <ListPreference
+            android:layout_height="48dp"
+            android:defaultValue="business"
+            android:entries="@array/chose_theme_array"
+            android:entryValues="@array/chose_theme_values"
+            android:icon="@drawable/ic_theme_style"
+            android:key="theme_key"
+            android:title="@string/chose_theme"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="time_format_array">
+        <item>10:59:59 – 2022/12/31</item>
+        <item>10:59:59 – 31/12/2022</item>
+    </string-array>
+    <string-array name="time_format_values">
+        <item>hh:mm:ss - yyyy/MM/dd</item>
+        <item>hh:mm:ss - dd/MM/yyyy</item>
+    </string-array>
+    <string-array name="chose_theme_array">
+        <item>Business theme</item>
+        <item>Dark theme</item>
+    </string-array>
+    <string-array name="chose_theme_values">
+        <item>business</item>
+        <item>dark</item>
+    </string-array>
+</resources>

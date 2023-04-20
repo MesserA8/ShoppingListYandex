@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import com.messer_amd.shoppinglistyandex.databinding.NewListDialogBinding
 
 object NewListDialog {
-    fun showDialog(context: Context, listener: Listener) {
+    fun showDialog(context: Context, listener: Listener, s: String) {
         var dialog: AlertDialog? = null
         val builder = AlertDialog.Builder(context)
         val binding = NewListDialogBinding.inflate(LayoutInflater.from(context))

@@ -6,4 +6,28 @@
     <string name="new_list">New category</string>
     <string name="list_name">input name</string>
     <string name="create_list_button">Create</string>
+    <string name="delete_item">Are you sure?</string>
+    <string name="delete_alert">Delete</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="delete_list">Delete category</string>
+    <string name="clear_list">Clear list</string>
+    <string name="share_list">Send list</string>
+    <string name="new_menu_item">New item</string>
+    <string name="save_item">Save item</string>
+    <string name="update_list_item">Update item</string>
+    <string name="update_item_button">Update</string>
+    <string name="empty">Click [+] for add new item </string>
+    <string name="hint_new_item">click here</string>
+    <string name="name_hint_update">Name</string>
+    <string name="item_info_hint_update">item info</string>
+    <string name="general">General</string>
+    <string name="settings_activity_name">Settings</string>
+    <string name="chose_time_format">Chose time format</string>
+    <string name="theme_settings">Theme settings</string>
+    <string name="chose_theme">Chose theme</string>
+    <string name="def_time_format" translatable="false">hh:mm:ss - dd/MM/yyyy</string>
+    <string name="rate_app">Rate this app in Play Market</string>
+    <string name="rate_app_title">Rate app</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Shop list fragment</string>
 </resources>
