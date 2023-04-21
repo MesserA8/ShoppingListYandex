@@ -1,9 +1,9 @@
 package com.messer_amd.shoppinglistyandex.db
 
-import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -52,9 +52,10 @@ class ShopListItemAdapter(private val listener: Listener) :
                 imEdit.setOnClickListener {
                     listener.onClickItem(shopListItem, EDIT)
                 }
-//                imDeleteLibrary.setOnClickListener {
-//                    listener.onClickItem(shopListItem, DELETE_LIBRARY_ITEM) //new edition temporary
-//                }
+                imDeleteItem.setOnClickListener {
+                   Toast.makeText(view.context, "Delete button test", Toast.LENGTH_LONG).show()
+                   listener.onDeleteItem(shopListItem) // GPT
+                }
             }
         }
         fun setLibraryData(shopListItem: ShopListItem, listener: Listener){
@@ -130,8 +131,8 @@ class ShopListItemAdapter(private val listener: Listener) :
     }
 
     interface Listener {
-        //fun deleteItem(id: Int)
         fun onClickItem(shopListItem: ShopListItem, state: Int)
+        fun onDeleteItem(item: ShopListItem) // chatGPT
     }
 
     companion object{

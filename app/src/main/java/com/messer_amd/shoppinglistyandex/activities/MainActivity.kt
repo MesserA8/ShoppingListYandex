@@ -16,6 +16,7 @@ import com.messer_amd.shoppinglistyandex.settings.SettingsActivity
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     private lateinit var defPref: SharedPreferences
+    private var currentMenuItemId = R.id.shop_list
     private var currentTheme = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,6 +45,11 @@ class MainActivity : AppCompatActivity() {
            }
            true
        }
+    }
+    override fun onResume() {
+        super.onResume()
+        binding.bNav.selectedItemId = currentMenuItemId
+        if (defPref.getString("theme_key", "business") != currentTheme) recreate()
     }
     private fun getSelectedTheme(): Int {
         return if (defPref.getString("theme_key", "business") == "business") {

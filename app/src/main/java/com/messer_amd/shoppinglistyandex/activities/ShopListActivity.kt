@@ -40,7 +40,7 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
         super.onCreate(savedInstanceState)
         binding = ActivityShopListBinding.inflate(layoutInflater)
         defPref = PreferenceManager.getDefaultSharedPreferences(this)
-       // setTheme(getSelectedTheme())
+        // setTheme(getSelectedTheme())
         setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true) //for go back
         init()
@@ -49,27 +49,6 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
         //initAdMob()
 
     }
-
-//    override fun onResume() {
-//        super.onResume()
-//        binding.adView.resume()
-//    }
-//
-//    override fun onPause() {
-//        super.onPause()
-//        binding.adView.pause()
-//    }
-//
-//    override fun onDestroy() {
-//        super.onDestroy()
-//        binding.adView.destroy()
-//    }
-//
-//    private fun initAdMob() {
-//        MobileAds.initialize(this)
-//        val adRequest = AdRequest.Builder().build()
-//        binding.adView.loadAd(adRequest)
-//    }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.shop_list_menu, menu)
@@ -81,7 +60,8 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
         textWatcher = textWatcher()
         return true
     }
-        // autocomplete for input text:
+
+    // autocomplete for input text:
     private fun textWatcher(): TextWatcher {
         return object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -105,13 +85,16 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
             R.id.save_item -> {
                 addNewShopItem(edItem?.text.toString())
             }
+
             R.id.delete_list -> {
                 mainViewModel.deleteShopList(shopListNameItem?.id!!, true)
                 finish()
             }
+
             R.id.clear_list -> {
                 mainViewModel.deleteShopList(shopListNameItem?.id!!, false)
             }
+
             R.id.share_list -> {
                 startActivity(
                     Intent.createChooser(
@@ -120,6 +103,7 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
                     )
                 )
             }
+
             android.R.id.home -> {
                 onBackPressed()
                 return true
@@ -229,6 +213,11 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
 
     }
 
+    override fun onDeleteItem(item: ShopListItem) {
+        mainViewModel.deleteShopListItem(item)
+    }
+
+
     private fun editListItem(item: ShopListItem) {
         EditListItemDialog.showDialog(this, item, object : EditListItemDialog.Listener {
             override fun onClick(item: ShopListItem) {
@@ -263,12 +252,4 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
         saveItemCount()
         super.onBackPressed()
     }
-
-//    private fun getSelectedTheme(): Int {
-//        return if (defPref.getString("theme_key", "green") == "green") {
-//            R.style.Theme_NewNoteGreen
-//        } else {
-//            R.style.Theme_NewNoteRed
-//        }
-//    }
 }

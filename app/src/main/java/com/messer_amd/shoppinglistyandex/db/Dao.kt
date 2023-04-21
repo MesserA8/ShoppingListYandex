@@ -1,6 +1,7 @@
 package com.messer_amd.shoppinglistyandex.db
 
 import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
@@ -35,4 +36,6 @@ interface Dao {
     suspend fun updateListItem(item: ShopListItem)
     @Update
     suspend fun updateListName(shopListNameItem: ShopListNameItem)
+    @Delete
+    suspend fun deleteShopListItem(shopListItem: ShopListItem) //GPT
 }
