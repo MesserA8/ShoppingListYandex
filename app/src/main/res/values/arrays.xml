@@ -9,11 +9,11 @@
         <item>hh:mm:ss - dd/MM/yyyy</item>
     </string-array>
     <string-array name="chose_theme_array">
-        <item>Business theme</item>
-        <item>Dark theme</item>
+        <item>Green theme</item>
+        <item>Red theme</item>
     </string-array>
     <string-array name="chose_theme_values">
-        <item>business</item>
-        <item>dark</item>
+        <item>green</item>
+        <item>red</item>
     </string-array>
 </resources>

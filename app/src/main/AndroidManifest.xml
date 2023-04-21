@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:name=".activities.MainApp"
@@ -11,11 +12,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ShoppingListBusiness">
+        android:theme="@style/Theme.ShoppingListGreen">
         <activity android:name=".settings.SettingsActivity"
+            android:label="@string/settings_activity_name"
             android:exported="true"/>
         <activity
             android:name=".activities.ShopListActivity"
+            android:parentActivityName=".activities.ShopListActivity"
             android:exported="true" />
         <activity
             android:name=".activities.MainActivity"

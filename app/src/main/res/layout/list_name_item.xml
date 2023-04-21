@@ -5,32 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageButton
-        android:id="@+id/imEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="6dp"
-        android:alpha="0.7"
-        android:backgroundTint="#EC5526"
-        android:elevation="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
-        app:layout_constraintEnd_toStartOf="@+id/imDelete"
-        app:layout_constraintTop_toTopOf="@+id/cardView"
-        app:srcCompat="@drawable/ic_edit_list" />
-
-    <ImageButton
-        android:id="@+id/imDelete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:alpha="0.7"
-        android:backgroundTint="#CE885F5F"
-        android:elevation="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
-        app:layout_constraintEnd_toEndOf="@+id/cardView"
-        app:layout_constraintTop_toTopOf="@+id/cardView"
-        app:srcCompat="@drawable/ic_delete_list" />
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="0dp"
@@ -53,6 +27,7 @@
                 android:id="@+id/tvListName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
                 android:text="TextView"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -62,6 +37,7 @@
                 android:id="@+id/tvTime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
                 android:text="TextView"
                 android:textSize="14sp" />
 
@@ -82,7 +58,7 @@
         android:layout_marginTop="6dp"
         android:layout_marginEnd="6dp"
         android:layout_marginBottom="6dp"
-        android:backgroundTint="#DD0682E4"
+        android:backgroundTint="#0678D3"
         app:cardCornerRadius="3dp"
         app:layout_constraintBottom_toBottomOf="@+id/imEdit"
         app:layout_constraintEnd_toStartOf="@+id/imEdit"
@@ -104,4 +80,30 @@
                 android:textColor="@color/white" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/imEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:alpha="0.8"
+        android:backgroundTint="@color/orange_dark"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toStartOf="@+id/imDelete"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:srcCompat="@drawable/ic_edit_list" />
+
+    <ImageButton
+        android:id="@+id/imDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:alpha="0.8"
+        android:backgroundTint="@color/grey"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:srcCompat="@drawable/ic_delete_list" />
 </androidx.constraintlayout.widget.ConstraintLayout>

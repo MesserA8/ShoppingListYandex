@@ -8,13 +8,21 @@
     <color name="business_stile_dark">#DF116671</color>
     <color name="dark_stile">#2B0B01</color>
     <color name="dark_stile_dark">#200902</color>
-    <color name="orange_dark">#852103</color>
-    <color name="orange_edit">#FD4308</color>
+    <color name="orange_dark">#D33401</color>
+    <color name="orange_edit">#F1DA0C</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#3C3B3B</color>
     <color name="green_main">#07A80D</color>
-    <color name="red_main">#D11D0F</color>
+    <color name="red_main">#BC180B</color>
     <color name="grey_light">#706C6C</color>
+    <color name="green_main_dark">#036107</color>
+    <color name="green_light_bg">#C5F3C8</color>
+    <color name="red_light">#910404</color>
+    <color name="red_light_bg">#DAF1D4D4</color>
+    <color name="red_dark">#5C0202</color>
+    <color name="green_light">#026C06</color>
+    <color name="green_dark">#013E04</color>
+
 </resources>

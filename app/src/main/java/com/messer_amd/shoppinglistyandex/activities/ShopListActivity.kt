@@ -1,5 +1,6 @@
 package com.messer_amd.shoppinglistyandex.activities
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -40,14 +41,12 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
         super.onCreate(savedInstanceState)
         binding = ActivityShopListBinding.inflate(layoutInflater)
         defPref = PreferenceManager.getDefaultSharedPreferences(this)
-        // setTheme(getSelectedTheme())
+        setTheme(getSelectedTheme())
         setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true) //for go back
         init()
         initRcView()
         listItemObserver()
-        //initAdMob()
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -214,7 +213,15 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
     }
 
     override fun onDeleteItem(item: ShopListItem) {
-        mainViewModel.deleteShopListItem(item)
+        //mainViewModel.deleteShopListItem(item)
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage(R.string.delete_item)
+        builder.setPositiveButton(R.string.delete_alert) { dialog, which ->
+            mainViewModel.deleteShopListItem(item)
+        }
+        builder.setNegativeButton(R.string.cancel_button, null)
+        val dialog = builder.create()
+        dialog.show()
     }
 
 
@@ -251,5 +258,12 @@ class ShopListActivity : AppCompatActivity(), ShopListItemAdapter.Listener {
     override fun onBackPressed() {
         saveItemCount()
         super.onBackPressed()
+    }
+    private fun getSelectedTheme(): Int {
+        return if (defPref.getString("theme_key", "green") == "green") {
+            R.style.Theme_ShoppingListGreen
+        } else {
+            R.style.Theme_ShoppingListRed
+        }
     }
 }

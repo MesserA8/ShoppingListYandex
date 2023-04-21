@@ -36,10 +36,10 @@ class SettingsActivity : AppCompatActivity(), SharedPreferences.OnSharedPreferen
     }
 
     private fun getSelectedTheme(): Int {
-        return if (defPref.getString("theme_key", "business") == "business") {
-            R.style.Theme_ShoppingListBusiness
+        return if (defPref.getString("theme_key", "green") == "green") {
+            R.style.Theme_ShoppingListGreen
         } else {
-            R.style.Theme_ShoppingListDark
+            R.style.Theme_ShoppingListRed
         }
     }
 

@@ -10,7 +10,7 @@ import kotlinx.coroutines.withContext
 import java.lang.IllegalArgumentException
 
 class MainViewModel(database: MainDataBase) : ViewModel() {
-    val dao = database.getDao()
+    private val dao = database.getDao()
     val libraryItems = MutableLiveData<List<LibraryItem>>()
     val allShopListNamesItem: LiveData<List<ShopListNameItem>> =
         dao.getAllShopListNames().asLiveData()

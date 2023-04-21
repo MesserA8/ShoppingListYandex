@@ -22,10 +22,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         defPref = PreferenceManager.getDefaultSharedPreferences(this)
         setTheme(getSelectedTheme())
+
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        currentTheme = defPref.getString("theme_key", "business").toString()
+        currentTheme = defPref.getString("theme_key", "green").toString()
         FragmentManager.setFragment(ShopListNamesFragment.newInstance(), this)
         setBottomNavListener()
     }
@@ -49,13 +50,13 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         binding.bNav.selectedItemId = currentMenuItemId
-        if (defPref.getString("theme_key", "business") != currentTheme) recreate()
+        if (defPref.getString("theme_key", "green") != currentTheme) recreate()
     }
     private fun getSelectedTheme(): Int {
-        return if (defPref.getString("theme_key", "business") == "business") {
-            R.style.Theme_ShoppingListBusiness
+        return if (defPref.getString("theme_key", "green") == "green") {
+            R.style.Theme_ShoppingListGreen
         } else {
-            R.style.Theme_ShoppingListDark
+            R.style.Theme_ShoppingListRed
         }
     }
 }

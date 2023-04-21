@@ -10,20 +10,5 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
        setPreferencesFromResource(R.xml.settings_preference, rootKey)
-       // init()
     }
-
-//    private fun init(){
-//        bManager = BillingManager(activity as AppCompatActivity)
-//        removeAdsPref = findPreference("remove_ads_key")!!
-//        removeAdsPref.setOnPreferenceClickListener {
-//            bManager.startConnection()
-//            true
-//        }
-//    }
-
-//    override fun onDestroy() {
-//        bManager.closeConnection()
-//        super.onDestroy()
-//    }
 }

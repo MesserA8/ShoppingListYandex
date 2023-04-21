@@ -53,7 +53,7 @@ class ShopListItemAdapter(private val listener: Listener) :
                     listener.onClickItem(shopListItem, EDIT)
                 }
                 imDeleteItem.setOnClickListener {
-                   Toast.makeText(view.context, "Delete button test", Toast.LENGTH_LONG).show()
+                  // Toast.makeText(view.context, "Delete button test", Toast.LENGTH_LONG).show()
                    listener.onDeleteItem(shopListItem) // GPT
                 }
             }
